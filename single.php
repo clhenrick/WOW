@@ -169,6 +169,7 @@ ul, ol, dl {
 			if($results){ ?>
 				<script>
 					var results = <?= json_encode($results);?>;
+					console.log(results);
 					var students = results.students.students;
 					var theses = results.theses;
 					var set_id = results.id;

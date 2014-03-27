@@ -480,7 +480,7 @@ jQuery(document).ready(function($){
 					if(students[shuffled_ids[j]].choices[n] == i && students[shuffled_ids[j]].thesis == -1){
 						for(var k=0;k<students[shuffled_ids[j]].peers.length;k++){
 							// If any of their peers are already enrolled in the section and there's still room...
-							if(students[students[shuffled_ids[j]].peers[k]].thesis == i && theses[i].enrolled.length<theses[i].total){
+							if(students[students[shuffled_ids[j]].peers[k]] !== undefined && students[students[shuffled_ids[j]].peers[k]].thesis == i && theses[i].enrolled.length<theses[i].total){
 								// That student is enrolled in the section
 								addStudent(students[shuffled_ids[j]],i);
 							}
